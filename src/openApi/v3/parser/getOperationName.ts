@@ -10,7 +10,7 @@ const operations = ["create", "list", "retrieve", "delete", "update"];
 export const getOperationName = (url: string, method: string, operationId?: string): string => {
     console.log("Getting operation name")
     if (operationId) {
-        const popped = operationId.split("-").pop();
+        const popped = operationId.split("_").pop();
         console.log(popped);
         if (popped && operations.includes(popped)) {
             return popped;
