@@ -1,6 +1,6 @@
 import camelCase from 'camelcase';
 
-const operations = ["create", "list", "retrieve", "delete", "update"]
+const operations = ["create", "list", "retrieve", "delete", "update"];
 
 /**
  * Convert the input value to a correct operation (method) classname.
@@ -8,8 +8,10 @@ const operations = ["create", "list", "retrieve", "delete", "update"]
  * on a generated name from the URL
  */
 export const getOperationName = (url: string, method: string, operationId?: string): string => {
+    console.log("Getting operation name")
     if (operationId) {
-        const popped = operationId.split("-").pop()
+        const popped = operationId.split("-").pop();
+        console.log(popped);
         if (popped && operations.includes(popped)) {
             return popped;
         }

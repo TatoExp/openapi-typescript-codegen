@@ -6,6 +6,7 @@ import camelCase from 'camelcase';
  * on a generated name from the URL
  */
 export const getOperationName = (url: string, method: string, operationId?: string): string => {
+    console.log("What the heck.")
     if (operationId) {
         return camelCase(
             operationId
