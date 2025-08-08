@@ -3,32 +3,33 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $Member = {
-    description: `Member schema`,
-    properties: {
-        authIdentifier: {
-            type: 'string',
+    "description": "Member schema",
+    "properties": {
+        "authIdentifier": {
+            "type": "string"
         },
-        createdAt: {
-            type: 'string',
-            format: 'date-time',
+        "createdAt": {
+            "format": "date-time",
+            "type": "string"
         },
-        deletedAt: {
-            type: 'string',
-            format: 'date-time',
+        "deletedAt": {
+            "format": "date-time",
+            "type": "string"
         },
-        firstName: {
-            type: 'string',
+        "firstName": {
+            "type": "string"
         },
-        id: {
-            type: 'string',
-            format: 'uuid',
+        "id": {
+            "format": "uuid",
+            "type": "string"
         },
-        lastName: {
-            type: 'string',
+        "lastName": {
+            "type": "string"
         },
-        updatedAt: {
-            type: 'string',
-            format: 'date-time',
-        },
+        "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

@@ -3,13 +3,14 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $SignedUrlResponse = {
-    description: `SignedUrlResponse schema`,
-    properties: {
-        assetUrl: {
-            type: 'string',
+    "description": "SignedUrlResponse schema",
+    "properties": {
+        "assetUrl": {
+            "type": "string"
         },
-        uploadUrl: {
-            type: 'string',
-        },
+        "uploadUrl": {
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

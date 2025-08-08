@@ -3,58 +3,60 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $HTTPError = {
-    description: `HTTPError schema`,
-    properties: {
-        detail: {
-            type: 'string',
-            description: `Human readable error message`,
-            isNullable: true,
+    "description": "HTTPError schema",
+    "properties": {
+        "detail": {
+            "description": "Human readable error message",
+            "nullable": true,
+            "type": "string"
         },
-        errors: {
-            type: 'array',
-            contains: {
-                properties: {
-                    more: {
-                        type: 'dictionary',
-                        contains: {
-                            description: `Additional information about the error`,
-                            properties: {
-                            },
-                            isNullable: true,
+        "errors": {
+            "items": {
+                "nullable": true,
+                "properties": {
+                    "more": {
+                        "additionalProperties": {
+                            "description": "Additional information about the error",
+                            "nullable": true
                         },
-                        isNullable: true,
+                        "description": "Additional information about the error",
+                        "nullable": true,
+                        "type": "object"
                     },
-                    name: {
-                        type: 'string',
-                        description: `For example, name of the parameter that caused the error`,
+                    "name": {
+                        "description": "For example, name of the parameter that caused the error",
+                        "type": "string"
                     },
-                    reason: {
-                        type: 'string',
-                        description: `Human readable error message`,
-                    },
+                    "reason": {
+                        "description": "Human readable error message",
+                        "type": "string"
+                    }
                 },
-                isNullable: true,
+                "type": "object"
             },
-            isNullable: true,
+            "nullable": true,
+            "type": "array"
         },
-        instance: {
-            type: 'string',
-            isNullable: true,
+        "instance": {
+            "nullable": true,
+            "type": "string"
         },
-        status: {
-            type: 'number',
-            description: `HTTP status code`,
-            isNullable: true,
+        "status": {
+            "description": "HTTP status code",
+            "example": 403,
+            "nullable": true,
+            "type": "integer"
         },
-        title: {
-            type: 'string',
-            description: `Short title of the error`,
-            isNullable: true,
+        "title": {
+            "description": "Short title of the error",
+            "nullable": true,
+            "type": "string"
         },
-        type: {
-            type: 'string',
-            description: `URL of the error type. Can be used to lookup the error in a documentation`,
-            isNullable: true,
-        },
+        "type": {
+            "description": "URL of the error type. Can be used to lookup the error in a documentation",
+            "nullable": true,
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

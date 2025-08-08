@@ -3,19 +3,20 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $MemberPatch = {
-    description: `MemberPatch schema`,
-    properties: {
-        authIdentifier: {
-            type: 'string',
-            isNullable: true,
+    "description": "MemberPatch schema",
+    "properties": {
+        "authIdentifier": {
+            "nullable": true,
+            "type": "string"
         },
-        firstName: {
-            type: 'string',
-            isNullable: true,
+        "firstName": {
+            "nullable": true,
+            "type": "string"
         },
-        lastName: {
-            type: 'string',
-            isNullable: true,
-        },
+        "lastName": {
+            "nullable": true,
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

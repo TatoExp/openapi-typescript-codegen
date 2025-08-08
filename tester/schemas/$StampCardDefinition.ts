@@ -3,17 +3,20 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $StampCardDefinition = {
-    description: `StampCardDefinition schema`,
-    properties: {
-        memberId: {
-            type: 'string',
-            isNullable: true,
-            format: 'uuid',
+    "description": "StampCardDefinition schema",
+    "properties": {
+        "memberId": {
+            "format": "uuid",
+            "nullable": true,
+            "type": "string"
         },
-        typeId: {
-            type: 'string',
-            isRequired: true,
-            format: 'uuid',
-        },
+        "typeId": {
+            "format": "uuid",
+            "type": "string"
+        }
     },
+    "required": [
+        "typeId"
+    ],
+    "type": "object"
 } as const;

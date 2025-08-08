@@ -3,78 +3,83 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $StampCardType = {
-    description: `StampCardType schema`,
-    properties: {
-        backgroundColor: {
-            type: 'string',
-            isRequired: true,
+    "description": "StampCardType schema",
+    "properties": {
+        "backgroundColor": {
+            "type": "string"
         },
-        createdAt: {
-            type: 'string',
-            format: 'date-time',
+        "createdAt": {
+            "format": "date-time",
+            "type": "string"
         },
-        deletedAt: {
-            type: 'string',
-            format: 'date-time',
+        "deletedAt": {
+            "format": "date-time",
+            "type": "string"
         },
-        description: {
-            type: 'string',
-            isRequired: true,
+        "description": {
+            "type": "string"
         },
-        foregroundColor: {
-            type: 'string',
-            isRequired: true,
+        "foregroundColor": {
+            "type": "string"
         },
-        id: {
-            type: 'string',
-            format: 'uuid',
+        "id": {
+            "format": "uuid",
+            "type": "string"
         },
-        labelColor: {
-            type: 'string',
-            isRequired: true,
+        "labelColor": {
+            "type": "string"
         },
-        logoText: {
-            type: 'string',
-            isRequired: true,
+        "logoText": {
+            "nullable": true,
+            "type": "string"
         },
-        logoUrl: {
-            type: 'string',
-            isRequired: true,
+        "logoUrl": {
+            "nullable": true,
+            "type": "string"
         },
-        milestones: {
-            type: 'array',
-            contains: {
-                properties: {
-                    action: {
-                        properties: {
-                            meta: {
-                                properties: {
-                                },
-                            },
-                            type: {
-                                type: 'string',
-                            },
+        "milestones": {
+            "items": {
+                "properties": {
+                    "action": {
+                        "properties": {
+                            "meta": {},
+                            "type": {
+                                "type": "string"
+                            }
                         },
+                        "type": "object"
                     },
-                    icon: {
-                        type: 'string',
-                        isRequired: true,
+                    "icon": {
+                        "type": "string"
                     },
-                    stampRequirement: {
-                        type: 'number',
-                        isRequired: true,
-                    },
+                    "stampRequirement": {
+                        "type": "integer"
+                    }
                 },
+                "required": [
+                    "icon",
+                    "stampRequirement"
+                ],
+                "type": "object",
+                "x-fuego-required-marker": true
             },
-            isRequired: true,
+            "type": "array"
         },
-        name: {
-            type: 'string',
-            isRequired: true,
+        "name": {
+            "type": "string"
         },
-        updatedAt: {
-            type: 'string',
-            format: 'date-time',
-        },
+        "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+        }
     },
+    "required": [
+        "backgroundColor",
+        "description",
+        "foregroundColor",
+        "labelColor",
+        "milestones",
+        "name"
+    ],
+    "type": "object"
 } as const;

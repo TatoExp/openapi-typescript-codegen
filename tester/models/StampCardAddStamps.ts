@@ -2,6 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export const $unknown_interface = {
-    "description": "unknown-interface schema"
-} as const;
+/**
+ * StampCardAddStamps schema
+ */
+export type StampCardAddStamps = {
+    stamps: number;
+};
+

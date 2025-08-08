@@ -3,62 +3,64 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $StampCardTypePatch = {
-    description: `StampCardTypePatch schema`,
-    properties: {
-        backgroundColor: {
-            type: 'string',
-            isNullable: true,
+    "description": "StampCardTypePatch schema",
+    "properties": {
+        "backgroundColor": {
+            "nullable": true,
+            "type": "string"
         },
-        description: {
-            type: 'string',
-            isNullable: true,
+        "description": {
+            "nullable": true,
+            "type": "string"
         },
-        foregroundColor: {
-            type: 'string',
-            isNullable: true,
+        "foregroundColor": {
+            "nullable": true,
+            "type": "string"
         },
-        labelColor: {
-            type: 'string',
-            isNullable: true,
+        "labelColor": {
+            "nullable": true,
+            "type": "string"
         },
-        logoText: {
-            type: 'string',
-            isNullable: true,
+        "logoText": {
+            "nullable": true,
+            "type": "string"
         },
-        logoUrl: {
-            type: 'string',
-            isNullable: true,
+        "logoUrl": {
+            "nullable": true,
+            "type": "string"
         },
-        milestones: {
-            type: 'array',
-            contains: {
-                properties: {
-                    action: {
-                        properties: {
-                            meta: {
-                                properties: {
-                                },
-                            },
-                            type: {
-                                type: 'string',
-                            },
+        "milestones": {
+            "items": {
+                "properties": {
+                    "action": {
+                        "properties": {
+                            "meta": {},
+                            "type": {
+                                "type": "string"
+                            }
                         },
+                        "type": "object"
                     },
-                    icon: {
-                        type: 'string',
-                        isRequired: true,
+                    "icon": {
+                        "type": "string"
                     },
-                    stampRequirement: {
-                        type: 'number',
-                        isRequired: true,
-                    },
+                    "stampRequirement": {
+                        "type": "integer"
+                    }
                 },
+                "required": [
+                    "icon",
+                    "stampRequirement"
+                ],
+                "type": "object"
             },
-            isNullable: true,
+            "nullable": true,
+            "type": "array"
         },
-        name: {
-            type: 'string',
-            isNullable: true,
-        },
+        "name": {
+            "nullable": true,
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

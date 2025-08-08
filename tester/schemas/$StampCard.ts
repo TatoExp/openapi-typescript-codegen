@@ -3,35 +3,37 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $StampCard = {
-    description: `StampCard schema`,
-    properties: {
-        createdAt: {
-            type: 'string',
-            format: 'date-time',
+    "description": "StampCard schema",
+    "properties": {
+        "createdAt": {
+            "format": "date-time",
+            "type": "string"
         },
-        deletedAt: {
-            type: 'string',
-            format: 'date-time',
+        "deletedAt": {
+            "format": "date-time",
+            "type": "string"
         },
-        id: {
-            type: 'string',
-            format: 'uuid',
+        "id": {
+            "format": "uuid",
+            "type": "string"
         },
-        memberId: {
-            type: 'string',
-            format: 'uuid',
+        "memberId": {
+            "format": "uuid",
+            "type": "string"
         },
-        stamps: {
-            type: 'number',
-            maximum: 255,
+        "stamps": {
+            "maximum": 255,
+            "minimum": 0,
+            "type": "integer"
         },
-        typeId: {
-            type: 'string',
-            format: 'uuid',
+        "typeId": {
+            "format": "uuid",
+            "type": "string"
         },
-        updatedAt: {
-            type: 'string',
-            format: 'date-time',
-        },
+        "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

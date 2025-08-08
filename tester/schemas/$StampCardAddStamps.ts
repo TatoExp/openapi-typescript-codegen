@@ -2,19 +2,17 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export const $TenantDefinition = {
-    "description": "TenantDefinition schema",
+export const $StampCardAddStamps = {
+    "description": "StampCardAddStamps schema",
     "properties": {
-        "country": {
-            "type": "string"
-        },
-        "name": {
-            "type": "string"
+        "stamps": {
+            "maximum": 127,
+            "minimum": -128,
+            "type": "integer"
         }
     },
     "required": [
-        "country",
-        "name"
+        "stamps"
     ],
     "type": "object"
 } as const;

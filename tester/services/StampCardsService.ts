@@ -3,6 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { StampCard } from '../models/StampCard';
+import type { StampCardAddStamps } from '../models/StampCardAddStamps';
 import type { StampCardDefinition } from '../models/StampCardDefinition';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class StampCardsService {
@@ -67,7 +68,7 @@ export class StampCardsService {
                 'Accept': accept,
             },
             body: requestBody,
-            mediaType: '*/*',
+            mediaType: 'application/json',
             errors: {
                 400: `Bad Request _(validation or deserialization error)_`,
                 500: `Internal Server Error _(panics)_`,
@@ -96,6 +97,41 @@ export class StampCardsService {
             headers: {
                 'Accept': accept,
             },
+            errors: {
+                400: `Bad Request _(validation or deserialization error)_`,
+                500: `Internal Server Error _(panics)_`,
+            },
+        });
+    }
+    /**
+     * Stamp a users stamp card
+     * No description provided
+     * @returns StampCard OK
+     * @throws ApiError
+     */
+    public addStamp({
+        id,
+        requestBody,
+        accept,
+    }: {
+        id: string,
+        /**
+         * Request body for payloads.StampCardAddStamps
+         */
+        requestBody: StampCardAddStamps,
+        accept?: string,
+    }): Promise<StampCard> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/stamp_cards/{id}/stamp',
+            path: {
+                'id': id,
+            },
+            headers: {
+                'Accept': accept,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
             errors: {
                 400: `Bad Request _(validation or deserialization error)_`,
                 500: `Internal Server Error _(panics)_`,

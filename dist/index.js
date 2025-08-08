@@ -1612,6 +1612,7 @@ const getModel = (openApi, definition, isDefinition = false, name = '') => {
         enum: [],
         enums: [],
         properties: [],
+        rawSchema: JSON.stringify(definition, null, 2),
     };
     if (definition.$ref) {
         const definitionRef = getType(definition.$ref);
@@ -4804,7 +4805,7 @@ var templateExportModel = {"1":function(container,depth0,helpers,partials,data) 
 },"usePartial":true,"useData":true};
 
 var templateExportSchema = {"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+    var stack1, alias1=container.strict, alias2=container.lambda, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
         }
@@ -4813,9 +4814,9 @@ var templateExportSchema = {"compiler":[8,">= 4.3.0"],"main":function(container,
 
   return ((stack1 = container.invokePartial(lookupProperty(partials,"header"),depth0,{"name":"header","data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
     + "\nexport const $"
-    + ((stack1 = container.lambda(container.strict(depth0, "name", {"start":{"line":3,"column":17},"end":{"line":3,"column":21}} ), depth0)) != null ? stack1 : "")
+    + ((stack1 = alias2(alias1(depth0, "name", {"start":{"line":3,"column":17},"end":{"line":3,"column":21}} ), depth0)) != null ? stack1 : "")
     + " = "
-    + ((stack1 = container.invokePartial(lookupProperty(partials,"schema"),depth0,{"name":"schema","data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + ((stack1 = alias2(alias1(depth0, "rawSchema", {"start":{"line":3,"column":29},"end":{"line":3,"column":38}} ), depth0)) != null ? stack1 : "")
     + " as const;";
 },"usePartial":true,"useData":true};
 

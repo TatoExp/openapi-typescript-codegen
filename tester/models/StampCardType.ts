@@ -13,8 +13,8 @@ export type StampCardType = {
     foregroundColor: string;
     id?: string;
     labelColor: string;
-    logoText: string;
-    logoUrl: string;
+    logoText?: string | null;
+    logoUrl?: string | null;
     milestones: Array<{
         action?: {
             meta?: any;

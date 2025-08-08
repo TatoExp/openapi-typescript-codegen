@@ -71,7 +71,7 @@ export class MembersService {
                 'Accept': accept,
             },
             body: requestBody,
-            mediaType: '*/*',
+            mediaType: 'application/json',
             errors: {
                 400: `Bad Request _(validation or deserialization error)_`,
                 500: `Internal Server Error _(panics)_`,
@@ -134,7 +134,7 @@ export class MembersService {
                 'Accept': accept,
             },
             body: requestBody,
-            mediaType: '*/*',
+            mediaType: 'application/json',
             errors: {
                 400: `Bad Request _(validation or deserialization error)_`,
                 500: `Internal Server Error _(panics)_`,

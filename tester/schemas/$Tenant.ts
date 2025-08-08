@@ -3,20 +3,21 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $Tenant = {
-    description: `Tenant schema`,
-    properties: {
-        country: {
-            type: 'string',
+    "description": "Tenant schema",
+    "properties": {
+        "country": {
+            "type": "string"
         },
-        id: {
-            type: 'string',
-            format: 'uuid',
+        "id": {
+            "format": "uuid",
+            "type": "string"
         },
-        name: {
-            type: 'string',
+        "name": {
+            "type": "string"
         },
-        publicKey: {
-            type: 'string',
-        },
+        "publicKey": {
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;

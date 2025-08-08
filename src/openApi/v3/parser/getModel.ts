@@ -46,6 +46,7 @@ export const getModel = (
         enum: [],
         enums: [],
         properties: [],
+        rawSchema: JSON.stringify(definition, null, 2),
     };
 
     if (definition.$ref) {

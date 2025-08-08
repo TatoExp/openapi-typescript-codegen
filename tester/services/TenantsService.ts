@@ -53,7 +53,7 @@ export class TenantsService {
                 'Accept': accept,
             },
             body: requestBody,
-            mediaType: '*/*',
+            mediaType: 'application/json',
             errors: {
                 400: `Bad Request _(validation or deserialization error)_`,
                 500: `Internal Server Error _(panics)_`,

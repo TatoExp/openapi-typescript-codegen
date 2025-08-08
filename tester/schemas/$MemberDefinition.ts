@@ -3,16 +3,17 @@
 /* tslint:disable */
 /* eslint-disable */
 export const $MemberDefinition = {
-    description: `MemberDefinition schema`,
-    properties: {
-        authIdentifier: {
-            type: 'string',
+    "description": "MemberDefinition schema",
+    "properties": {
+        "authIdentifier": {
+            "type": "string"
         },
-        firstName: {
-            type: 'string',
+        "firstName": {
+            "type": "string"
         },
-        lastName: {
-            type: 'string',
-        },
+        "lastName": {
+            "type": "string"
+        }
     },
+    "type": "object"
 } as const;
